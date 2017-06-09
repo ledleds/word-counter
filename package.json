@@ -1,0 +1,19 @@
+{
+  "name": "word-counter",
+  "version": "1.0.0",
+  "description": "Count occurrences of work in a given file",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ledleds/word-counter.git"
+  },
+  "author": "Vicky Ledsom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ledleds/word-counter/issues"
+  },
+  "homepage": "https://github.com/ledleds/word-counter#readme"
+}
