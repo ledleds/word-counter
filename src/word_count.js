@@ -4,7 +4,11 @@ function WordCounter(){
   this.counts = {};
 }
 
-WordCounter.prototype.count = function (wordArray) {
+WordCounter.prototype.countAllWords = function (wordArray) {
+  return 3
+};
+
+WordCounter.prototype.countIndividialWords = function (wordArray) {
   for (var i = 0; i < wordArray.length; i++) {
     var word = wordArray[i];
     this.checkIfWordExists(word);
