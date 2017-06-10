@@ -19,4 +19,8 @@ FileInput.prototype.removeNonChars = function () {
   this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, '');
 };
 
+FileInput.prototype.createArray = function () {
+  this.fileContents = this.fileContents.split(' ')
+};
+
 module.exports = FileInput;

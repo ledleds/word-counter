@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 const FileInput = require("../src/file_input.js"),
       fileInput = new FileInput();
 
@@ -19,11 +19,16 @@ describe("File preperation", function(){
 
   it("can downcase the entire string", function(){
     fileInput.downCaseString();
-    expect(fileInput.fileContents).toEqual('the banana is: an edible fruit.\n');
+    expect(fileInput.fileContents).toEqual("the banana is: an edible fruit.\n");
   });
 
   it("can remove punctuation and newlines", function(){
     fileInput.removeNonChars();
-    expect(fileInput.fileContents).toEqual('the banana is an edible fruit')
+    expect(fileInput.fileContents).toEqual("the banana is an edible fruit")
   });
+
+  it("turns string into array of words", function(){
+    fileInput.createArray();
+    expect(fileInput.fileContents).toEqual(['the', 'banana', 'is', 'an', 'edible', 'fruit'])
+  })
 });
