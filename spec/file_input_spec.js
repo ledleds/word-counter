@@ -8,3 +8,14 @@ describe("File input", function(){
     expect(fileInput.fileContents).toEqual(jasmine.any(Object));
   });
 });
+
+describe("File preperation", function(){
+  beforeAll(function() {
+    fileInput.inputFile('example.txt');
+  })
+
+  it("can turn the object into a string", function(){
+    fileInput.stringify();
+    expect(fileInput.fileContents).toEqual(jasmine.any(String));
+  });
+});
