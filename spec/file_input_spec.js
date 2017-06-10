@@ -4,6 +4,7 @@ const FileInput = require("../src/file_input.js"),
 
 describe("File input", function(){
   it("can read a file", function(){
-    expect(fileInput.inputFile('example2.txt')).toEqual(jasmine.any(Object))
+    fileInput.inputFile('example.txt');
+    expect(fileInput.fileContents).toEqual(jasmine.any(Object));
   });
 });

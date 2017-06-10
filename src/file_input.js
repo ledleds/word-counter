@@ -5,8 +5,7 @@ function FileInput(){
 }
 
 FileInput.prototype.inputFile = function (file) {
-  var array = fs.readFileSync(file)
-  return array
+  this.fileContents = fs.readFileSync(file)
 };
 
 module.exports = FileInput;
