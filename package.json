@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ledleds/word-counter/issues"
   },
-  "homepage": "https://github.com/ledleds/word-counter#readme"
+  "homepage": "https://github.com/ledleds/word-counter#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
