@@ -9,7 +9,6 @@ describe("File preperation", function(){
   })
 
   it("can read a file", function(){
-    fileInput.inputFile('example.txt');
     expect(fileInput.fileContents).toEqual(jasmine.any(Object));
   });
 
@@ -18,8 +17,13 @@ describe("File preperation", function(){
     expect(fileInput.fileContents).toEqual(jasmine.any(String));
   });
 
-  it("downcases the entire string", function(){
+  it("can downcase the entire string", function(){
     fileInput.downCaseString();
     expect(fileInput.fileContents).toEqual('the banana is: an edible fruit.\n');
+  });
+
+  it("can remove punctuation and newlines", function(){
+    fileInput.removeNonChars();
+    expect(fileInput.fileContents).toEqual('the banana is an edible fruit')
   });
 });

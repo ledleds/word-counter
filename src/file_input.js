@@ -11,9 +11,12 @@ FileInput.prototype.stringify = function () {
   this.fileContents = this.fileContents.toString();
 };
 
-
 FileInput.prototype.downCaseString = function () {
   this.fileContents = this.fileContents.toLowerCase();
+};
+
+FileInput.prototype.removeNonChars = function () {
+  this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, '');
 };
 
 module.exports = FileInput;
