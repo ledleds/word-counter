@@ -1,10 +1,14 @@
 'use strict';
 const fs = require('fs');
 
-function WordCount(){};
-
-WordCount.prototype.inputFile = function (file) {
-  return true
+function WordCounter(){
+  this.counts = {};
 };
 
-module.exports = WordCount;
+WordCounter.prototype.count = function (wordArray) {
+    var word = wordArray[0];
+    this.counts[word] = 1;
+    return this.counts
+};
+
+module.exports = WordCounter;

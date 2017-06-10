@@ -1,9 +1,10 @@
 'use strict';
-const WordCount = require("../src/word_count.js"),
-      wordCount = new WordCount();
+const WordCounter = require("../src/word_count.js"),
+      wordCounter = new WordCounter();
 
-describe("File input", function(){
-  it("can read a file", function(){
-    expect(wordCount.inputFile('example.txt')).toBe(true)
+describe("counting", function(){
+  it("can count one word", function(){
+    var mockCounts = { bananas: 1 };
+    expect(wordCounter.count(['bananas'])).toEqual(mockCounts)
   });
 });
