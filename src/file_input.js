@@ -5,7 +5,7 @@ function FileInput(){
 }
 
 FileInput.prototype.inputFile = function (file) {
-  var array = fs.readFileSync('example2.txt')
+  var array = fs.readFileSync(file)
   return array
 };
 
