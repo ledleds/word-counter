@@ -2,17 +2,16 @@
 const FileInput = require("../src/file_input.js"),
       fileInput = new FileInput();
 
-describe("File input", function(){
+describe("File preperation", function(){
+
+  beforeAll(function() {
+    fileInput.inputFile('example.txt');
+  })
+
   it("can read a file", function(){
     fileInput.inputFile('example.txt');
     expect(fileInput.fileContents).toEqual(jasmine.any(Object));
   });
-});
-
-describe("File preperation", function(){
-  beforeAll(function() {
-    fileInput.inputFile('example.txt');
-  })
 
   it("can turn the object into a string", function(){
     fileInput.stringify();
@@ -21,6 +20,6 @@ describe("File preperation", function(){
 
   it("downcases the entire string", function(){
     fileInput.downCaseString();
-    expect(fileInput.fileContents).toEqual('the banana is: an edible fruit.\n')
-  })
+    expect(fileInput.fileContents).toEqual('the banana is: an edible fruit.\n');
+  });
 });
