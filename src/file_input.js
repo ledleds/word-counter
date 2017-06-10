@@ -12,4 +12,9 @@ FileInput.prototype.stringify = function () {
   this.fileContents = this.fileContents.toString();
 };
 
+
+FileInput.prototype.downCaseString = function () {
+  this.fileContents = this.fileContents.toLowerCase();
+};
+
 module.exports = FileInput;

@@ -18,4 +18,9 @@ describe("File preperation", function(){
     fileInput.stringify();
     expect(fileInput.fileContents).toEqual(jasmine.any(String));
   });
+
+  it("downcases the entire string", function(){
+    fileInput.downCaseString();
+    expect(fileInput.fileContents).toEqual('the banana is: an edible fruit.\n')
+  })
 });
