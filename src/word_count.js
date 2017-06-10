@@ -6,9 +6,11 @@ function WordCounter(){
 };
 
 WordCounter.prototype.count = function (wordArray) {
-    var word = wordArray[0];
+  for (var i = 0; i < wordArray.length; i++) {
+    var word = wordArray[i];
     this.counts[word] = 1;
-    return this.counts
+  }
+  return this.counts;
 };
 
 module.exports = WordCounter;
