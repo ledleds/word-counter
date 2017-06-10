@@ -5,7 +5,7 @@ function WordCounter(){
 }
 
 WordCounter.prototype.countAllWords = function (wordArray) {
-  return wordArray.length
+ return wordArray.length
 };
 
 WordCounter.prototype.countIndividialWords = function (wordArray) {
