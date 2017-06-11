@@ -1,5 +1,5 @@
-'use strict';
-const fs = require('fs');
+"use strict";
+const fs = require("fs");
 
 function FileInput(){}
 
@@ -25,11 +25,11 @@ FileInput.prototype.downCaseString = function () {
 };
 
 FileInput.prototype.removeNonChars = function () {
-  this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, '');
+  this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, "");
 };
 
 FileInput.prototype.createArray = function () {
-  this.fileContents = this.fileContents.split(' ')
+  this.fileContents = this.fileContents.split(" ")
 };
 
 module.exports = FileInput;

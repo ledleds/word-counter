@@ -1,10 +1,10 @@
-const express = require('express'),
-      bodyParser = require('body-parser'),
-      multer = require('multer'),
+const express = require("express"),
+      bodyParser = require("body-parser"),
+      multer = require("multer"),
       app = express();
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-var upload = multer({ dest: __dirname + '/./public/uploads/' })
+var upload = multer({ dest: __dirname + "/./public/uploads/" })
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));

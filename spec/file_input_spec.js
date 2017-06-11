@@ -5,8 +5,8 @@ const FileInput = require("../src/file_input.js"),
 describe("File preperation", function(){
 
   beforeAll(function() {
-    fileInput.inputFile('example.txt');
-  })
+    fileInput.inputFile("example.txt");
+  });
 
   it("can read a file", function(){
     expect(fileInput.fileContents).toEqual(jasmine.any(Object));
@@ -24,11 +24,11 @@ describe("File preperation", function(){
 
   it("can remove punctuation and newlines", function(){
     fileInput.removeNonChars();
-    expect(fileInput.fileContents).toEqual("the banana is an edible fruit")
+    expect(fileInput.fileContents).toEqual("the banana is an edible fruit");
   });
 
   it("turns string into array of words", function(){
     fileInput.createArray();
-    expect(fileInput.fileContents).toEqual(['the', 'banana', 'is', 'an', 'edible', 'fruit'])
-  })
+    expect(fileInput.fileContents).toEqual(["the", "banana", "is", "an", "edible", "fruit"]);
+  });
 });

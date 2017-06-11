@@ -4,7 +4,7 @@
   "description": "Count occurrences of work in a given file",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ledleds/word-counter#readme",
   "devDependencies": {
+    "jasmine": "^2.6.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
