@@ -1,7 +1,9 @@
 "use strict";
 const fs = require("fs");
 
-function FileInput(){}
+function FileInput(){
+  this.fileContents = {};
+}
 
 // change this to two files? file input seperate?
 // also have one method that calls all others
