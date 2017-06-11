@@ -6,6 +6,9 @@
 </head>
 <body>
   <h1>Welcome to Word Counter!</h1>
-  <textarea placeholder="Start typing, or paste your document here..." id="text-box" rows="12"></textarea>
+  <form action="/counter" method="post" id="textform" name="textform">
+    <textarea placeholder="Start typing, or paste your document here..." id="text-box" rows="12" name="textinput"></textarea>
+    <input type="submit">
+  </form>
 </body>
 </html>
