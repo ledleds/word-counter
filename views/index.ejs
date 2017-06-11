@@ -6,9 +6,11 @@
 </head>
 <body>
   <h1>Welcome to Word Counter!</h1>
-  <form action="/counter" method="post" id="textform" name="textform">
-    <textarea placeholder="Start typing, or paste your document here..." id="text-box" rows="12" name="textinput"></textarea>
-    <input type="submit">
+
+  <form action="/upload" method="post" enctype="multipart/form-data" id="uploadform" name="upload">
+    Select a file to upload:
+    <input type="file" name="textFile"> <!-- the file is called textfile! -->
+    <input type="submit" value="Upload">
   </form>
 </body>
 </html>
