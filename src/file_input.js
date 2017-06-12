@@ -16,14 +16,18 @@ FileInput.prototype.stringify = function () {
 FileInput.prototype.prepareFile = function (file) {
   this.inputFile(file);
   this.stringify();
-  this.downCaseString();
   this.removeNonChars();
+  this.downCaseString();
   this.createArray();
   return this.fileContents;
 };
 
 FileInput.prototype.downCaseString = function () {
   this.fileContents = this.fileContents.toLowerCase();
+};
+
+FileInput.prototype.removeWhiteSpace = function () {
+  this.fileContents = this.fileContents.trim()
 };
 
 FileInput.prototype.removeNonChars = function () {

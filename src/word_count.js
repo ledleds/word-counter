@@ -21,7 +21,7 @@ WordCounter.prototype.primeChecker = function () {
     var array = [];
     var value = counter.counts[key];
     var isPrime = counter.isPrime(value);
-    
+
     array.push(value, isPrime);
     counter.countsWithPrime[key] = array;
   });

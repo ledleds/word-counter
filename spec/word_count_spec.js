@@ -3,10 +3,6 @@ const WordCounter = require("../src/word_count.js")
 
 describe("counting", function() {
 
-  // beforeEach(function() {
-  //   wordCounter.counts = {};
-  // });
-
   it("can count one word", function() {
     var wordCounter = new WordCounter(["bananas"]);
     var mockCounts = { bananas: 1 };
