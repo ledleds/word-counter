@@ -12,6 +12,7 @@ function Run(file) {
   console.log(wordCounter.countsWithPrime);
 };
 
+// Execute with file below
 Run('./the_railway_children.txt');
 
 module.exports = Run;

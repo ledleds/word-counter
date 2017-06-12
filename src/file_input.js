@@ -13,16 +13,16 @@ FileInput.prototype.stringify = function () {
   this.fileContents = this.fileContents.toString();
 };
 
-FileInput.prototype.downCaseString = function () {
-  this.fileContents = this.fileContents.toLowerCase();
-};
-
 FileInput.prototype.removeWhiteSpace = function () {
   this.fileContents = this.fileContents.trim();
 };
 
 FileInput.prototype.removeNonChars = function () {
   this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, "");
+};
+
+FileInput.prototype.downCaseString = function () {
+  this.fileContents = this.fileContents.toLowerCase();
 };
 
 FileInput.prototype.createArray = function () {
