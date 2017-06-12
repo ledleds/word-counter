@@ -29,6 +29,10 @@ FileInput.prototype.createArray = function () {
   this.fileContents = this.fileContents.split(" ");
 };
 
+FileInput.prototype.removeEmptyElements = function () {
+  this.fileContents = this.fileContents.filter(function(e){ return e.replace(/(\r\n|\n|\r)/gm,"")});
+};
+
 FileInput.prototype.prepareFile = function (file) {
   this.inputFile(file);
   this.stringify();
@@ -36,6 +40,7 @@ FileInput.prototype.prepareFile = function (file) {
   this.removeWhiteSpace();
   this.downCaseString();
   this.createArray();
+  this.removeEmptyElements();
   return this.fileContents;
 };
 

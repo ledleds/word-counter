@@ -28,12 +28,16 @@ describe("File preperation", function() {
 
   it("can remove punctuation", function() {
     fileInput.removeNonChars();
-    expect(fileInput.fileContents).toEqual("the banana is an edible fruit");
+    expect(fileInput.fileContents).toEqual('the  banana  is   an edible fruit ');
   });
 
-  it("turns string into array of words", function() {
-    fileInput.removeWhiteSpace();
+  it("turns string into array of words and removes empty", function() {
     fileInput.createArray();
-    expect(fileInput.fileContents).toEqual(["the", "banana", "is", "an", "edible", "fruit"]);
+    expect(fileInput.fileContents).toEqual([ 'the', '', 'banana', '', 'is', '', '', 'an', 'edible', 'fruit', '' ]);
   });
+
+  it("removes empty elements from array", function() {
+      fileInput.removeEmptyElements();
+      expect(fileInput.fileContents).toEqual(["the", "banana", "is", "an", "edible", "fruit"]);
+    });
 });
