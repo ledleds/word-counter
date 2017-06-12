@@ -16,6 +16,7 @@ FileInput.prototype.stringify = function () {
 FileInput.prototype.prepareFile = function (file) {
   this.inputFile(file);
   this.stringify();
+  this.removeWhiteSpace();
   this.removeNonChars();
   this.downCaseString();
   this.createArray();
