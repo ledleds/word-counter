@@ -32,14 +32,26 @@ describe("counting", function() {
 });
 
 describe("Prime numbers", function() {
-  var wordCounter = new WordCounter(["bananas", "blueberries", "pineapple"]);
+  var wordCounter = new WordCounter(["bananas", "blueberries", "pineapple", "pineapple"]);
+
+  beforeAll(function() {
+    wordCounter.countIndividialWords();
+    wordCounter.primeChecker();
+  });
 
   it("returns false if a number is not prime", function() {
-    expect(wordCounter.isPrime(4)).toEqual(false);
+    expect(wordCounter.isPrime(1)).toEqual(false);
   });
 
   it("returns true if a number IS prime", function() {
     expect(wordCounter.isPrime(73)).toEqual(true);
   });
 
+  it("can add false to the object", function() {
+    expect(wordCounter.countsWithPrime["blueberries"]).toEqual([1, false]);
+  });
+
+  it("can add true to the object", function() {
+    expect(wordCounter.countsWithPrime["pineapple"]).toEqual([2, true]);
+  });
 });

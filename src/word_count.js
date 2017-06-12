@@ -3,6 +3,7 @@
 function WordCounter(wordArray){
   this.wordArray = wordArray
   this.counts = {};
+  this.countsWithPrime = {};
 }
 
 WordCounter.prototype.isPrime = function (value) {
@@ -11,7 +12,19 @@ WordCounter.prototype.isPrime = function (value) {
       return false;
     }
   }
-  return true;
+  return value > 1;
+};
+
+WordCounter.prototype.primeChecker = function () {
+  var counter = this;
+  Object.keys(this.counts).map(function(key) {
+    var array = [];
+    var value = counter.counts[key];
+    var isPrime = counter.isPrime(value);
+    
+    array.push(value, isPrime);
+    counter.countsWithPrime[key] = array;
+  });
 };
 
 WordCounter.prototype.countAllWords = function () {
