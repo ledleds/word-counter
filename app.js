@@ -20,7 +20,6 @@ app.get("/", function (req, res) {
 app.post("/upload", upload.single("textFile"), function(req, res) {
   var file = req.file.path;
   var preparedFile = fileInput.prepareFile(file);
-  console.log(preparedFile)
   wordCounter = new WordCounter(preparedFile);
   res.render('result', { message: wordCounter.countIndividialWords(), wordCounter: wordCounter});
 });
