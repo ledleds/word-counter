@@ -18,12 +18,12 @@ describe("File preperation", function() {
 
   it("can downcase the entire string", function() {
     fileInput.downCaseString();
-    expect(fileInput.fileContents).toEqual("    the banana is: an edible fruit.\n");
+    expect(fileInput.fileContents).toEqual("    the 'banana' is: -an edible fruit.\n");
   });
 
   it("can remove trailing whitespace", function() {
     fileInput.removeWhiteSpace();
-    expect(fileInput.fileContents).toEqual("the banana is: an edible fruit.")
+    expect(fileInput.fileContents).toEqual("the 'banana' is: -an edible fruit.")
   });
 
   it("can remove punctuation", function() {
