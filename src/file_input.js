@@ -13,6 +13,22 @@ FileInput.prototype.stringify = function () {
   this.fileContents = this.fileContents.toString();
 };
 
+FileInput.prototype.downCaseString = function () {
+  this.fileContents = this.fileContents.toLowerCase();
+};
+
+FileInput.prototype.removeWhiteSpace = function () {
+  this.fileContents = this.fileContents.trim();
+};
+
+FileInput.prototype.removeNonChars = function () {
+  this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, "");
+};
+
+FileInput.prototype.createArray = function () {
+  this.fileContents = this.fileContents.split(" ");
+};
+
 FileInput.prototype.prepareFile = function (file) {
   this.inputFile(file);
   this.stringify();
@@ -21,22 +37,6 @@ FileInput.prototype.prepareFile = function (file) {
   this.downCaseString();
   this.createArray();
   return this.fileContents;
-};
-
-FileInput.prototype.downCaseString = function () {
-  this.fileContents = this.fileContents.toLowerCase();
-};
-
-FileInput.prototype.removeWhiteSpace = function () {
-  this.fileContents = this.fileContents.trim()
-};
-
-FileInput.prototype.removeNonChars = function () {
-  this.fileContents = this.fileContents.replace(/[^a-zA-Z ]/g, "");
-};
-
-FileInput.prototype.createArray = function () {
-  this.fileContents = this.fileContents.split(" ")
 };
 
 module.exports = FileInput;

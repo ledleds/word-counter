@@ -1,7 +1,7 @@
 'use strict';
 
 function WordCounter(wordArray){
-  this.wordArray = wordArray
+  this.wordArray = wordArray;
   this.counts = {};
   this.countsWithPrime = {};
 }
@@ -28,7 +28,7 @@ WordCounter.prototype.primeChecker = function () {
 };
 
 WordCounter.prototype.countAllWords = function () {
-  return "Total number of words in the file: " + this.wordArray.length
+  return "Total number of words in the file: " + this.wordArray.length;
 };
 
 WordCounter.prototype.countIndividialWords = function () {
