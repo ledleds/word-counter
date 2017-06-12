@@ -1,16 +1,26 @@
 'use strict';
 
-function WordCounter(){
+function WordCounter(wordArray){
+  this.wordArray = wordArray
   this.counts = {};
 }
 
-WordCounter.prototype.countAllWords = function (wordArray) {
- return wordArray.length
+WordCounter.prototype.isPrime = function (value) {
+  for (var i = 2; i <= Math.sqrt(value); i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
-WordCounter.prototype.countIndividialWords = function (wordArray) {
-  for (var i = 0; i < wordArray.length; i++) {
-    var word = wordArray[i];
+WordCounter.prototype.countAllWords = function () {
+  return "Total number of words in the file: " + this.wordArray.length
+};
+
+WordCounter.prototype.countIndividialWords = function () {
+  for (var i = 0; i < this.wordArray.length; i++) {
+    var word = this.wordArray[i];
     this.checkIfWordExists(word);
   }
   return this.counts;

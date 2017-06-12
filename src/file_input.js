@@ -5,9 +5,6 @@ function FileInput(){
   this.fileContents = {};
 }
 
-// change this to two files? file input seperate?
-// also have one method that calls all others
-
 FileInput.prototype.inputFile = function (file) {
   this.fileContents = fs.readFileSync(file);
 };
@@ -16,11 +13,14 @@ FileInput.prototype.stringify = function () {
   this.fileContents = this.fileContents.toString();
 };
 
-// FileInput.prototype.prepareString = function () {
-//   downCaseString();
-//   removeNonChars();
-//   createArray();
-// };
+FileInput.prototype.prepareFile = function (file) {
+  this.inputFile(file);
+  this.stringify();
+  this.downCaseString();
+  this.removeNonChars();
+  this.createArray();
+  return this.fileContents;
+};
 
 FileInput.prototype.downCaseString = function () {
   this.fileContents = this.fileContents.toLowerCase();
